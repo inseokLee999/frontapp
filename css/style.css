@@ -37,6 +37,14 @@ img{
 .montserrat{
     font-family: "Montserrat", sans-serif;
 }
+h3{
+    font-size: 1.538rem;
+    color: #212121;
+    text-align: center;
+    line-height: 1;
+    padding: 20px;
+    margin: 0;
+}
 /*공통 스타일 E*/
 
 /*헤더 스타일 S*/
@@ -75,17 +83,226 @@ header nav a{
 /* 메인 배너 영역 E */
 .main-banner img{
     width: 100%;
+    display: block;/*display:block->하단쪽 여백 0*/
 }
 /* 메인 배너 영역 s */
 /* 서브 메뉴 영역 E */
 .sub-menus {
     display: flex;
     flex-wrap: wrap;
+    border: 10px solid #ededed;
+    border-left: 0;
+    border-right: 0;
 }
 .sub-menus a{
     width: calc(100% / 3);
     text-align: center;
     height: 50px;
     line-height: 50px;
+    font-weight: 500;
+    font-size: 1.077rem;
+    border-top: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+}
+.sub-menus a:nth-of-type(1),
+.sub-menus a:nth-of-type(2),
+.sub-menus a:nth-of-type(3){
+    border-top: 0;
+}
+.sub-menus a:nth-of-type(3n+1){
+    border-left: 0;
 }
 /* 서브 메뉴 영역 s */
+/* 서브 배너 영역 E */
+.sub-banner{
+    display: flex;/*display:block->하단쪽 여백 0*/
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.sub-banner a:nth-of-type(1){
+    width:100%;
+}
+.sub-banner a:nth-of-type(2),
+.sub-banner a:nth-of-type(3){
+    width: 50%;
+}
+.sub-banner img{
+    width: 100%;
+    display: block;
+}
+/* 서브 배너 영역 s */
+/* 상품 목록 영역 S */
+.products ul{
+    display: flex;
+    flex-wrap:wrap;
+    margin: 0 15px;
+}
+.products li{
+    width: calc(100% / 2 - 8px);
+    margin-bottom: 30px;
+}
+.products li:nth-of-type(2n){
+    margin-left: 16px;
+}
+.products .product-image img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.products .product-image{
+    margin-bottom: 10px;
+    display: block;
+}
+.products .product-price{
+    font-size:1.154rem;
+}
+.products .product-price .price{
+    font-weight: 800;
+    font-size:1.2rem;
+    letter-spacing: -1px;
+}
+.products .product-name{
+    font-size: 1.154em;
+    color: #3e3d3c;
+    word-break: break-all;
+}
+.products .stars img{
+    height: 11px;
+}
+
+.products .no-of-review {
+    font-size: 0.923rem;
+    color: #a7a7a7;
+    margin-left: 6px;
+}
+.products .review-rate{
+    margin:10px 0 2px
+}
+.products .more-button{
+    display: block;
+    width: 100%;
+    padding: 8px 0 8px 0;
+    text-align: center;
+    background: #ffffff;
+    font-size: 1.154rem;
+    border: 1px solid #b1b1b1;
+    color: #666;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+/* 상품 목록 영역 E */
+/*  하단 영역 S */
+.products
+.bottom-banner{
+    width: 100%;
+    display: block;
+    margin: 10px 0 20px;
+} 
+/* 하단 영역 E */
+/* 푸터 영역 S */
+footer{
+    background: #f9f9f9;
+    padding: 25px 0 80px;
+    margin-top: 25px;
+} 
+footer .logo img{
+    width: 79px;
+    display: block;
+    margin: 0 auto 12px;
+}
+footer .center-phone{
+    border: 2px solid #2a2a2a;
+    border-radius: 20px; 
+    height: 35px;
+    line-height: 31px;
+    display: block;
+    width: 190px;
+    margin: 0 auto 7px;
+    font-size: 1.538rem;
+    font-weight: 800;
+    text-align: center;
+}
+footer .center-phone img{
+    height: 16px;
+    vertical-align: middle;
+}
+footer .bank-info {
+    font-size: 0.923rem;
+    color: #2a2a2a;
+    text-align: center;
+}
+footer .bank-info span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+footer .company-info{
+    text-align: center;
+    margin:3px 0 8px;
+    font-size: 0.923rem;
+    font-weight: 600;
+    color: #878787;
+}
+footer .company-info img{
+    width: 15px;
+    vertical-align: middle;
+}
+footer .links{
+    text-align: center;
+}
+footer .links a{
+    font-size: 0.846rem;
+    padding: 0 11px;
+    color: #878787;
+    position: relative;
+}
+footer .links a:not(.last)::after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 8px;
+    background: #878787;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+/* 푸터  영역 E */
+
+/* 하단 고정 영역 S */
+.bottom-quick-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #124bbd;
+    z-index: 10;
+    padding: 9px 15px;
+}
+.bottom-quick-menu button{
+    background-color: #f8f8f8;
+    width: 26px;
+    height: 30px;
+}
+.bottom-quick-menu .links{
+    display:flex;
+}
+.bottom-quick-menu .links a{
+    flex-grow: 1;
+    width: 0;
+}
+
+.bottom-quick-links{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    z-index: 10;
+}
+.bottom-quick-links img{
+    display: block;
+    width: 50px;
+    margin-bottom: 10px;
+}
+/* 하단 고정 영역 s */
